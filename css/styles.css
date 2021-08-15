@@ -1,0 +1,319 @@
+/* COLORS
+Green: #60A10F
+Gray: #f0f0f0
+Dark Gray: #303030;
+White: white;
+
+Fonts:
+Google Font Pair : aleo & Roboto
+
+*/
+
+/* Universal */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+img {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+
+/* Links */
+
+header {
+    display: grid;
+    row-gap: .5rem;
+}
+
+nav {
+    display: grid;
+    padding: .3rem;
+    max-width: 90%;
+    margin: 0 auto;
+    border-bottom: double;
+    border-top: double;
+}
+
+nav ul {
+    display: grid;
+    row-gap: .1rem;
+}
+
+
+nav ul li {
+    padding: .5rem 0;
+    text-align: center;
+    background-color: #303030;
+    margin: 0 .2rem;
+    border: double #808080;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Della Respira', serif;
+    color: white;
+    display: block;
+    letter-spacing: .1rem;
+}
+
+
+/* FONTS  */
+
+h1 {
+    font-family: 'Della Respira', serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+
+h3 {
+    font-family: 'Della Respira', serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+
+
+/* BODY */
+
+body {
+    font-size: .75rem;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    display: grid;
+    row-gap: 2.5rem;
+}
+
+.intro{
+    text-align: center;
+}
+
+.masthead {
+    background-image: url(../images/free-money.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0 auto;
+    width: 90%;
+    height: 15rem;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.text{
+    align-self: flex-end;
+
+}
+
+.masthead span{
+    align-self: flex-start;
+}
+
+.masthead span i{
+    font-size:1.5rem;
+    margin:1rem;
+}
+
+
+/* DYNAMIC CONTENT  */
+
+.dynamic-data {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.pf {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.pf-card h3 {
+    font-size: 1rem;
+    padding-top: .5rem;
+    text-align: center;
+}
+
+
+.art-card {
+    display: grid;
+    row-gap: .5rem;
+    padding: 1.5rem 0 4rem 0;
+    border-bottom: double #303030;
+}
+
+.art-card h3 {
+    text-align: center;
+    font-weight: 600;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+
+}
+
+
+.art-card h4 {
+    font-family: 'Della Respira', serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+figcaption {
+    font-family: 'Della Respira', serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* FOOTER */
+
+footer {
+    color: white;
+    background-image: url(../images/free-money.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #303030;
+    font-size: 1rem;
+}
+
+footer h4 {
+    font-weight: 900;
+}
+
+.foot-con {
+    padding: 1rem 0;
+    width: 95%;
+    margin: 0 auto;
+
+}
+
+.foot-text h3 {
+    font-family: 'Della Respira', serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons i {
+    margin: 1rem;
+    color: white;
+    font-size: 3rem;
+}
+
+.icons a i:first-child {
+    margin-left: 0;
+}
+
+
+
+/***************************************************
+MEDIA QUERY 920px
+***************************************************/
+
+@media only screen and (min-width: 720px) {
+
+    body {
+        font-size: 1rem;
+    }
+
+    nav {
+        max-width: 70%;
+    }
+
+    nav ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pf {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1.5rem;
+        column-gap: 1.5rem;
+    }
+
+    .art-card {
+        grid-template-columns: 40% 60%;
+        grid-template-rows: min-content;
+        column-gap: 1.5rem;
+    }
+
+    .art-card h3 {
+        grid-column: 1/3;
+        text-align: center;
+    }
+
+    .art-card img {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .art-card h4 {
+        grid-column: 2/2;
+        grid-row: 2/3;
+    }
+
+    .art-card p {
+        grid-column: 2/2;
+        grid-row: 2/3;
+    }
+
+}
+
+
+
+/***************************************************
+MEDIA QUERY 80rem
+***************************************************/
+
+@media only screen and (min-width: 1280px) {
+
+    body {
+        font-size: 1.25rem;
+    }
+
+    a {
+        font-size: .75rem;
+    }
+
+    .masthead {
+        max-width: 50%;
+    }
+
+    .dynamic-data {
+        width: 70%;
+    }
+
+    .pf {
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 1rem;
+        column-gap: 1rem;
+    }
+
+    .art-card {
+        grid-template-columns: 40% 60%;
+        grid-template-rows: min-content;
+        column-gap: 1.5rem;
+    }
+
+    .art-card h3 {
+        grid-column: 1/3;
+        text-align: left;
+    }
+
+
+
+}
